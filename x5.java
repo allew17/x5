@@ -5,7 +5,7 @@
 
 String title=  "ELASTIC COLLISIONS";
 String news=   "Use 'r' key to reset.";
-String author=  "Your Name";
+String author=  "Will";
 
 
 float left, right, top, bottom;
@@ -64,6 +64,12 @@ void table( float left, float top, float right, float bottom ) {
 //// ACTION:  bounce off walls, collisions
 void bounce() {
   redX += redDX;  if ( redX<left || redX>right ) redDX *= -1;
+  bluX += bluDX;  if ( bluX<left || bluX>right ) bluDX *= -1;
+  yelX += yelDX;  if ( yelX<left ||yelX>right ) yelDX *= -1;
+  //
+  redDY += redDY;  if ( redDY<left || redDY>right ) redDY *= -1;
+  bluX += bluDY;  if ( bluX<left || bluX>right ) bluDY *= -1;
+  yelX += yelDY;  if ( yelX<left ||yelX>right ) yelDY *= -1;
 }
 void collisions() {
   float tmp;
